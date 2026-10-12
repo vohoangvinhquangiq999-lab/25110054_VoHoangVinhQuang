@@ -1,5 +1,5 @@
 # 25110054_VoHoangVinhQuang
-Tên dự án: Vehicle Rental System
+# Tên dự án: Vehicle Rental System
 Sinh viên thực hiện: Võ Hoàng Vinh Quang
 MSSV: 25110054
 Môn học: Object-Oriented Programming – HK1 2026-2027
