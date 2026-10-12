@@ -1,13 +1,13 @@
 # 25110054_VoHoangVinhQuang
 # Tên dự án: Vehicle Rental System
-Sinh viên thực hiện: Võ Hoàng Vinh Quang
-MSSV: 25110054
-Môn học: Object-Oriented Programming – HK1 2026-2027
+# Sinh viên thực hiện: Võ Hoàng Vinh Quang
+# MSSV: 25110054
+# Môn học: Object-Oriented Programming – HK1 2026-2027
 C# / .NET Core / Visual Studio
-GitHub: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang
-Program.cs: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/Program.cs
-README.md: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/README.md
-WEEKLY REPORT WEEK 1+2: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/WEEKLY_REPORT_WEEK1_WEEK2.md
+GitHub: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang <br>
+Program.cs: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/Program.cs <br>
+README.md: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/README.md <br>
+WEEKLY REPORT WEEK 1+2: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/WEEKLY_REPORT_WEEK1_WEEK2.md <br>
 TỔNG QUAN VỀ DỰ ÁN Vehicle Rental System:
 Phân tích bài toán thực tế (Problem Restatement):
 - Doanh nghiệp cho thuê xe cần một hệ thống quản lý tập trung đội xe (xe bình dân Economy, xe gầm cao SUV,...), xử lý lịch đặt xe (Booking), tra cứu xe trống theo khoảng thời gian và tính toán chi phí khi khách trả xe. Các thách thức cốt lõi cần giải quyết: 
