@@ -3,7 +3,7 @@
 # Sinh viên thực hiện: Võ Hoàng Vinh Quang
 # MSSV: 25110054
 # Môn học: Object-Oriented Programming – HK1 2026-2027
-C# / .NET Core / Visual Studio
+C# / .NET Core / Visual Studio <br>
 GitHub: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang <br>
 Program.cs: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/Program.cs <br>
 README.md: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/README.md <br>
