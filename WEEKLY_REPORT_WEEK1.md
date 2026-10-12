@@ -1,4 +1,4 @@
-# BÁO CÁO TIẾN ĐỘ DỰ ÁN TUẦN 1
+# BÁO CÁO TIẾN ĐỘ DỰ ÁN TUẦN 1 (ANALYZE & DESIGN)
 ## 1. Thiết kế các Lớp
 	- Vehicle (Abstract Class): Lớp cơ sở chứa thông tin chung (Id, LicensePlate, DailyRate, Mileage, Condition). 
 	- EconomyVehicle & SuvVehicle: Các dòng xe cụ thể triển khai quy tắc tính phí riêng. 
