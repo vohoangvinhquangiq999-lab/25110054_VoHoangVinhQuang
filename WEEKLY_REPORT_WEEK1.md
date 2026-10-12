@@ -1,19 +1,5 @@
-BÁO CÁO TIẾN ĐỘ DỰ ÁN (TUẦN 1 & TUẦN 2)
-Tên dự án: Vehicle Rental System
-Sinh viên thực hiện: Võ Hoàng Vinh Quang
-MSSV: 25110054
-Môn học: Lập trình Hướng đối tượng (OOP) – HK1 2026-2027
-C# / .NET Core / Visual Studio
-GitHub: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang
-
-I. TỔNG QUAN VỀ DỰ ÁN & BỐI CẢNH (DOMAIN ANALYSIS)
-1. Phân tích bài toán thực tế (Problem Restatement)
-Doanh nghiệp cho thuê xe cần một hệ thống quản lý tập trung đội xe (xe bình dân Economy, xe gầm cao SUV,...), xử lý lịch đặt xe (Booking), tra cứu xe trống theo khoảng thời gian và tính toán chi phí khi khách trả xe. Các thách thức cốt lõi cần giải quyết: 
-Tra cứu và chống trùng lịch (Double booking): Đảm bảo một xe không bị đặt trùng bởi 2 khách trong cùng một khoảng thời gian. 
-Giá và phí phạt linh hoạt (Price & Fees): Phí thuê theo ngày, phí trả muộn (Late Fee) và phí đền bù hư hỏng (Damage Fee) thay đổi tùy theo dòng xe. 
-Quản lý vòng đời và trạng thái xe: Theo dõi số km đã đi (Mileage) và tình trạng kỹ thuật (Condition) liên tục qua các lượt thuê.
-II. BÁO CÁO TUẦN 1: PHÂN TÍCH VÀ THIẾT KẾ (ANALYZE & DESIGN)
-1. Thiết kế các Lớp
+# BÁO CÁO TIẾN ĐỘ DỰ ÁN TUẦN 1
+## 1. Thiết kế các Lớp
 	Vehicle (Abstract Class): Lớp cơ sở chứa thông tin chung (Id, LicensePlate, DailyRate, Mileage, Condition). 
 	EconomyVehicle & SuvVehicle: Các dòng xe cụ thể triển khai quy tắc tính phí riêng. 
 	Booking: Đại diện cho một giao dịch đặt xe, quản lý thông tin khách hàng, ngày bắt đầu/kết thúc và trạng thái đặt. 
