@@ -9,6 +9,7 @@ Program.cs: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQua
 README.md: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/README.md <br>
 WEEKLY REPORT WEEK 1: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/WEEKLY_REPORT_WEEK1.md <br>
 WEEKLY REPORT WEEK 2: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/WEEKLY_REPORT_WEEK2.md <br>
+COMMITS: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/commits/master/ <br>
 ## TỔNG QUAN VỀ DỰ ÁN Vehicle Rental System:
 ### Phân tích bài toán thực tế (Problem Restatement):
 Doanh nghiệp cho thuê xe cần một hệ thống quản lý tập trung đội xe (xe bình dân Economy, xe gầm cao SUV,...), xử lý lịch đặt xe (Booking), tra cứu xe trống theo khoảng thời gian và tính toán chi phí khi khách trả xe. Các thách thức cốt lõi cần giải quyết: 
