@@ -5,6 +5,7 @@ MSSV: 25110054
 Môn học: Lập trình Hướng đối tượng (OOP) – HK1 2026-2027
 C# / .NET Core / Visual Studio
 GitHub: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang
+
 I. TỔNG QUAN VỀ DỰ ÁN & BỐI CẢNH (DOMAIN ANALYSIS)
 1. Phân tích bài toán thực tế (Problem Restatement)
 Doanh nghiệp cho thuê xe cần một hệ thống quản lý tập trung đội xe (xe bình dân Economy, xe gầm cao SUV,...), xử lý lịch đặt xe (Booking), tra cứu xe trống theo khoảng thời gian và tính toán chi phí khi khách trả xe. Các thách thức cốt lõi cần giải quyết: 
