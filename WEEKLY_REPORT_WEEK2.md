@@ -14,25 +14,25 @@
 
 ## 2. Invariants Protection
 
-**Lớp Vehicle:**
+**2.1. Lớp Vehicle:**
 
 - Ràng buộc 1 (Giá thuê dương): Ngay tại Constructor, nếu dailyRate <= 0, hệ thống lập tức ném ra ArgumentException.
 
 - Ràng buộc 2 (Không tua ngược số km - Mileage Invariant): Số km xe chạy (Mileage) chỉ có thể tăng hoặc giữ nguyên. Thuộc tính Mileage có setter là private. Việc cập nhật số km bắt buộc phải thông qua phương thức UpdateAfterRental. Trong phương thức này, nếu newMileage < Mileage, hệ thống sẽ ném ngoại lệ ngăn chặn hành vi ghi đè dữ liệu sai lệch.   
 
-**Lớp Booking:**
+**2.2. Lớp Booking:**
 
 - Ràng buộc thời gian thuê: Ngày kết thúc (EndDate) bắt buộc phải sau ngày bắt đầu (StartDate). Kiểm tra này được thực hiện trực tiếp trong Constructor của Booking.   
 
 - Ràng buộc trạng thái: Đơn đặt xe chỉ được chuyển sang trạng thái Completed thông qua phương thức CompleteBooking() khi trạng thái hiện tại đang là Confirmed.
 
-**Lớp InventoryService (Overlap Detection):**
+**2.3. Lớp InventoryService (Overlap Detection):**
 
 Ngăn chặn tình trạng đặt trùng xe (Double-booking) bằng biểu thức logic trong Booking.OverlapsWith:StartDate < end && EndDate > start.
 
 Nếu đã có lịch đặt kích hoạt trùng thời gian, CreateBooking sẽ ném ngoại lệ InvalidOperationException để từ chối giao dịch.
 
-**setter public**
+**2.4. Setter public:**
 - Nếu Mileage có public set, có thể trực tiếp gán car.Mileage = 5000 (giảm từ 15000km xuống 5000km), làm sai lệch lịch trình bảo dưỡng xe và gây mất an toàn kỹ thuật.
 - Nếu Booking.Status để public, có thể vô tình chuyển trạng thái đơn hàng từ Cancelled sang Completed mà bỏ qua bước tính toán hóa đơn, dẫn đến thất thoát tài chính.
 
