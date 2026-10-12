@@ -2,35 +2,39 @@
 
 ## 1. Giải thích Chi tiết các Nguyên lý OOP
 
-** Encapsulation (Đóng gói): ** Bảo vệ trạng thái nội bộ của đối tượng bằng cách ẩn các setter (private set, protected set), chỉ cho phép thay đổi dữ liệu thông qua các phương thức có kiểm tra điều kiện.   
+**Encapsulation (Đóng gói):** Bảo vệ trạng thái nội bộ của đối tượng bằng cách ẩn các setter (private set, protected set), chỉ cho phép thay đổi dữ liệu thông qua các phương thức có kiểm tra điều kiện.   
 
-** Polymorphism (Đa hình): ** Xây dựng lớp cơ sở abstract class Vehicle và hai lớp con EconomyVehicle, SuvVehicle ghi đè (override) các phương thức tính phí trễ hạn và phí hư hỏng.   
+**Polymorphism (Đa hình):** Xây dựng lớp cơ sở abstract class Vehicle và hai lớp con EconomyVehicle, SuvVehicle ghi đè (override) các phương thức tính phí trễ hạn và phí hư hỏng.   
 
-Vehicle, Booking, Bill: Mô hình hóa dữ liệu và quy tắc nghiệp vụ cốt lõi.  
+- Vehicle, Booking, Bill: Mô hình hóa dữ liệu và quy tắc nghiệp vụ cốt lõi.  
 
-InventoryService: Quản lý kho xe, tra cứu và xử lý chống trùng lịch đặt.  
+- InventoryService: Quản lý kho xe, tra cứu và xử lý chống trùng lịch đặt.  
 
-BillingService: Đảm nhận việc quyết toán hóa đơn khi trả xe.
+- BillingService: Đảm nhận việc quyết toán hóa đơn khi trả xe.
 
 ## 2. Invariants Protection
 
-** Lớp Vehicle: **
+**Lớp Vehicle:**
 
-Ràng buộc 1 (Giá thuê dương): Ngay tại Constructor, nếu dailyRate <= 0, hệ thống lập tức ném ra ArgumentException.
+- Ràng buộc 1 (Giá thuê dương): Ngay tại Constructor, nếu dailyRate <= 0, hệ thống lập tức ném ra ArgumentException.
 
-Ràng buộc 2 (Không tua ngược số km - Mileage Invariant): Số km xe chạy (Mileage) chỉ có thể tăng hoặc giữ nguyên. Thuộc tính Mileage có setter là private. Việc cập nhật số km bắt buộc phải thông qua phương thức UpdateAfterRental. Trong phương thức này, nếu newMileage < Mileage, hệ thống sẽ ném ngoại lệ ngăn chặn hành vi ghi đè dữ liệu sai lệch.   
+- Ràng buộc 2 (Không tua ngược số km - Mileage Invariant): Số km xe chạy (Mileage) chỉ có thể tăng hoặc giữ nguyên. Thuộc tính Mileage có setter là private. Việc cập nhật số km bắt buộc phải thông qua phương thức UpdateAfterRental. Trong phương thức này, nếu newMileage < Mileage, hệ thống sẽ ném ngoại lệ ngăn chặn hành vi ghi đè dữ liệu sai lệch.   
 
-** Lớp Booking: **
+**Lớp Booking:**
 
-Ràng buộc thời gian thuê: Ngày kết thúc (EndDate) bắt buộc phải sau ngày bắt đầu (StartDate). Kiểm tra này được thực hiện trực tiếp trong Constructor của Booking.   
+- Ràng buộc thời gian thuê: Ngày kết thúc (EndDate) bắt buộc phải sau ngày bắt đầu (StartDate). Kiểm tra này được thực hiện trực tiếp trong Constructor của Booking.   
 
-Ràng buộc trạng thái: Đơn đặt xe chỉ được chuyển sang trạng thái Completed thông qua phương thức CompleteBooking() khi trạng thái hiện tại đang là Confirmed.
+- Ràng buộc trạng thái: Đơn đặt xe chỉ được chuyển sang trạng thái Completed thông qua phương thức CompleteBooking() khi trạng thái hiện tại đang là Confirmed.
 
-** Lớp InventoryService (Overlap Detection): **
+**Lớp InventoryService (Overlap Detection):**
 
 Ngăn chặn tình trạng đặt trùng xe (Double-booking) bằng biểu thức logic trong Booking.OverlapsWith:StartDate < end && EndDate > start.
 
 Nếu đã có lịch đặt kích hoạt trùng thời gian, CreateBooking sẽ ném ngoại lệ InvalidOperationException để từ chối giao dịch.
 
-## 3. Chạy các test case mẫu:
+**setter public**
+- Nếu Mileage có public set, có thể trực tiếp gán car.Mileage = 5000 (giảm từ 15000km xuống 5000km), làm sai lệch lịch trình bảo dưỡng xe và gây mất an toàn kỹ thuật.
+- Nếu Booking.Status để public, có thể vô tình chuyển trạng thái đơn hàng từ Cancelled sang Completed mà bỏ qua bước tính toán hóa đơn, dẫn đến thất thoát tài chính.
+
+## 3. Chạy các test case mẫu: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/demotest.png
 
