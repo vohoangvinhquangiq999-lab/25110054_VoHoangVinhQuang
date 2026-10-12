@@ -8,7 +8,7 @@
 	- BillingService: Thực hiện quy trình trả xe và xuất hóa đơn. 
 Giải thích lựa chọn mối quan hệ giữa các lớp: Tính kế thừa (Inheritance) giữa Vehicle và EconomyVehicle/SuvVehicle. Mối quan hệ này phù hợp vì xe Economy hay SUV đều thực sự là một loại xe (Vehicle), dùng chung thuộc tính nhận diện nhưng thể hiện hành vi tính phí khác nhau. 
 
-2. Sơ đồ UML: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/uml.png
+## 2. Sơ đồ UML: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/uml.png
 
 
 
