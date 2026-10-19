@@ -36,5 +36,31 @@ Nếu đã có lịch đặt kích hoạt trùng thời gian, CreateBooking sẽ
 - Nếu Mileage có public set, có thể trực tiếp gán car.Mileage = 5000 (giảm từ 15000km xuống 5000km), làm sai lệch lịch trình bảo dưỡng xe và gây mất an toàn kỹ thuật.
 - Nếu Booking.Status để public, có thể vô tình chuyển trạng thái đơn hàng từ Cancelled sang Completed mà bỏ qua bước tính toán hóa đơn, dẫn đến thất thoát tài chính.
 
-## 3. Chạy các test case mẫu: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/demotest.png
+## 3. Single Responsibility Principle (SRP)
+
+**3.1 Vị trí xuất hiện trong Code**
+
+| Lớp (Class) | Trách nhiệm duy nhất | Các phương thức chính |
+| :--- | :--- | :--- |
+| **InventoryService** | Quản lý kho xe | Tìm kiếm xe trống (`SearchAvailableVehicles`), Khởi tạo đơn đặt xe (`CreateBooking`). |
+| **BillingService** | Tính toán hóa đơn thanh toán & Tài chính | Áp dụng phí phạt, Xử lý quy trình trả xe (`GenerateBill`). |
+
+**3.2 Giải thích cụ thể lý do áp dụng**
+* **Phân định rõ ràng nghiệp vụ:** Tra cứu lịch trống thuộc về mảng *Quản lý kho / Lịch trình*, còn tính hóa đơn thuộc về mảng *Tài chính / Kế toán*.
+* **Giảm thiểu rủi ro lan truyền bug:** Nếu gộp chung vào một *"God Class"*, khi doanh nghiệp thay đổi công thức ưu đãi/thuế giá trị gia tăng, ta buộc phải sửa đổi lớp chứa cả thuật toán tìm kiếm xe trống, dễ dẫn đến rủi ro phát sinh bug lan truyền. Việc tách biệt giúp bảo trì độc lập.
+
+---
+
+### Cài đặt logic trong C# (`Booking.cs`)
+
+| Đối tượng A / Đối tượng B | Điều kiện kiểm tra giao nhau (Overlap) |
+| :--- | :--- |
+| **Khoảng A / Khoảng B** | `StartA < EndB && EndA > StartB` |
+
+### Giải thích thuật toán
+Hai khoảng thời gian giao nhau khi và chỉ khi:
+* **Ngày bắt đầu** của đợt này nhỏ hơn **Ngày kết thúc** của đợt kia (`StartA < EndB`) 
+* **Ngày kết thúc** của đợt này lớn hơn **Ngày bắt đầu** của đợt kia (`EndA > StartB`).
+
+## 4. Chạy các test case mẫu: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/blob/master/demotest.png
 
