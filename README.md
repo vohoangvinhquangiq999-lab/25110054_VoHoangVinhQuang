@@ -17,8 +17,8 @@ Doanh nghiệp cho thuê xe cần một hệ thống quản lý tập trung đ�
 - Giá và phí phạt linh hoạt (Price & Fees): Phí thuê theo ngày, phí trả muộn (Late Fee) và phí đền bù hư hỏng (Damage Fee) thay đổi tùy theo dòng xe. 
 - Quản lý vòng đời và trạng thái xe: Theo dõi số km đã đi (Mileage) và tình trạng kỹ thuật (Condition) liên tục qua các lượt thuê.
 # Nhật ký sử dụng AI:
-| NGÀY | CÔNG CỤ AI | YÊU CẦU |
-|---|---|---|
-| 04/10/2026 | Gemini, ChatGPT | Gợi ý thiết kế các lớp OOP cho bài toán Vehicle Rental System bằng C# |
+| NGÀY | CÔNG CỤ AI | YÊU CẦU | AI TRẢ VỀ |
+|---|---|---|---|
+| 04/10/2026 | Gemini, ChatGPT | Gợi ý thiết kế các lớp OOP cho bài toán Vehicle Rental System bằng C# | Danh sách lớp đề xuất: Vehicle abstract, hai lớp xe, Booking, Bill, các service |
 | 08/10/2026 | Gemini, Claude | Sửa lỗi và hỗ trợ viết file Program.cs |
 | 11/10/2026 | Claude | Đánh giá code, viết unit test và gỡ lỗi build. |
