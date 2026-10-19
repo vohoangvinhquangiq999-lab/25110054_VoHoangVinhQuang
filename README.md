@@ -19,6 +19,6 @@ Doanh nghiệp cho thuê xe cần một hệ thống quản lý tập trung đ�
 # Nhật ký sử dụng AI:
 | NGÀY | CÔNG CỤ AI | YÊU CẦU | AI TRẢ VỀ |
 |---|---|---|---|
-| 04/10/2026 | Gemini, ChatGPT | Gợi ý thiết kế các lớp OOP cho bài toán Vehicle Rental System bằng C# | Danh sách lớp đề xuất: Vehicle abstract, hai lớp xe, Booking, Bill, các service |
+| 04/10/2026 | Gemini, ChatGPT | Gợi ý thiết kế các lớp OOP cho bài toán Vehicle Rental System bằng C# | AI đề |
 | 08/10/2026 | Gemini, Claude | Sửa lỗi và hỗ trợ viết file Program.cs |
 | 11/10/2026 | Claude | Đánh giá code, viết unit test và gỡ lỗi build. |
