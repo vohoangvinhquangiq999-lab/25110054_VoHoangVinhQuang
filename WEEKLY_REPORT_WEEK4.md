@@ -12,6 +12,8 @@ COMMITS: https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/
 
 Thêm `LuxuryVehicle.cs` (chỉ thêm file mới): https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/commit/4a7bb7befa99dde8be1213072c06933e82f06421
 
+Bổ sung Thêm ExtensibilityTests.cs (lý do bổ sung: dạ do em quên upload): https://github.com/vohoangvinhquangiq999-lab/25110054_VoHoangVinhQuang/commit/b05d8a73fde4ace469a6eff0fc0cffe62f5ce6a3
+
 ## 1. Extensibility demo: thêm loại xe mới KHÔNG sửa lớp có sẵn
 
 **Yêu cầu giả định:** công ty thêm dòng xe hạng sang: phí trả trễ +100% giá thuê, phí hư hại 500 (nhẹ) / 1500 (nặng).
